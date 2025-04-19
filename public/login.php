@@ -71,7 +71,7 @@ try {
                 if ($tempsRestant > 1) {
                     throw new Exception('Ce compte est bloqué. Réessayez dans ' . $tempsRestant . ' minutes.');
                 } else {
-                    throw new Exception('Ce compte est bloqué. Réessayez dans ' . $tempsRestant . ' minute  .');
+                    throw new Exception('Ce compte est bloqué. Réessayez dans ' . $tempsRestant . ' minute.');
                 }
             }
         } else {
