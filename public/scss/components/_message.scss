@@ -1,0 +1,46 @@
+.error-message,
+.success-message {
+    padding: 10px;
+    @include border-radius(5px);
+    @include animation(300ms linear 3 blink_effect);
+    word-wrap: break-word;
+
+    .icon {
+        margin-left: 5px;
+        margin-right: 3px;
+
+        &::before {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+        }
+    }
+}
+
+.error-message {
+    background: var(--color-fill-alert);
+    color: white;
+
+    .icon::before {
+        content: "\f00d";
+    }
+}
+
+.success-message {
+    background: var(--color-fill-success);
+
+    .icon::before {
+        content: "\f00c";
+    }
+}
+
+@include keyframes(blink_effect) {
+    0% {
+        @include opacity(1);
+    }
+    50% {
+        @include opacity(0);
+    }
+    100% {
+        @include opacity(1);
+    }
+}

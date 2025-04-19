@@ -1,0 +1,164 @@
+$mobile-breakpoint: 1050px;
+$table-width: 1024px;
+
+main.show {
+	width: $table-width;
+	margin: auto;
+	margin-bottom: 35px;
+
+	@media all and (max-width: $mobile-breakpoint) {
+		width: 95%;
+	}
+
+	.user-info {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		margin-bottom: 20px;
+
+		p {
+			.email {
+				margin-right: 10px;
+				font-size: 14px;
+			}
+		}
+
+		a.deconnexion {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			background: var(--black);
+			text-decoration: none;
+			color: white;
+			width: max-content;
+			padding: 10px;
+			border-radius: 4px;
+			font-size: 14px;
+			svg {
+				margin-right: 7px;
+			}
+		}
+	}
+
+	.input-search-container {
+		text-align: center;
+		margin-bottom: 10px;
+	}
+
+	.table-container {
+		width: $table-width;
+		overflow-x: auto;
+		margin: auto;
+
+		@media all and (max-width: $mobile-breakpoint) {
+			width: 95%;
+		}
+
+		.info-table {
+			font-size: 14px;
+			margin-top: 7px;
+			margin-bottom: 7px;
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+		}
+
+		.table {
+			width: $table-width;
+			background: white;
+
+			@media all and (max-width: $mobile-breakpoint) {
+				width: 100%;
+			}
+
+			.row {
+				display: flex;
+				align-items: center;
+				height: max-content;
+				font-size: 14px;
+				border-bottom: 1px solid #dedcdc;
+
+				@media all and (max-width: $mobile-breakpoint) {
+					display: block;
+				}
+
+				&--header {
+					background: var(--purple);
+					color: white;
+
+					position: sticky;
+					position: -webkit-sticky;
+					top: 0;
+					border-bottom: none;
+
+					.case {
+						@media all and (max-width: $mobile-breakpoint) {
+							display: none;
+						}
+					}
+
+					.vide {
+						visibility: hidden;
+
+						@media all and (max-width: $mobile-breakpoint) {
+							display: none;
+						}
+					}
+
+					@media all and (max-width: $mobile-breakpoint) {
+						height: 10px;
+					}
+				}
+
+				.case {
+					width: 20%;
+					max-width: 200px;
+					overflow-x: auto;
+					white-space: normal;
+					word-wrap: break-word;
+					font-size: 13px;
+					padding: 8px 10px;
+
+					@media all and (max-width: $mobile-breakpoint) {
+						padding: 5px 20px;
+						width: max-content;
+						text-align: left;
+						max-width: 90%;
+					}
+
+					&.site {
+						@media all and (max-width: $mobile-breakpoint) {
+							font-size: 20px;
+							font-weight: 500;
+						}
+					}
+
+					&.email,
+					&.username,
+					&.password,
+					&.description {
+						@media all and (max-width: $mobile-breakpoint) {
+							display: none;
+						}
+					}
+				}
+
+				.action {
+					margin-left: 10px;
+					background: none;
+					text-decoration: none;
+					color: var(--purple-dark);
+
+					&:hover {
+						color: var(--purple);
+						text-decoration: underline;
+					}
+
+					@media all and (max-width: $mobile-breakpoint) {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}

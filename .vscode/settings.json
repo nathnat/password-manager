@@ -1,0 +1,12 @@
+{
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "compressed",
+            "extensionName": ".css",
+            "savePath": "/public/css/"
+        }
+    ],
+    "liveSassCompile.settings.excludeList": [ 
+        "public/library/**"
+   ]
+}

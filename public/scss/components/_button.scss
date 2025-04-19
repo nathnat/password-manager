@@ -1,0 +1,39 @@
+.btn {
+	padding: 7px 13px;
+	font-size: 14px;
+    font-weight: 500;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background 0.4s;
+    text-decoration: none;
+
+    background: none;
+    
+    &-primary {
+        background: var(--purple);
+
+        &:hover {
+            background: var(--purple-dark);
+        }
+    }
+
+    &-secondary {
+        background: #f2f2f2;
+        color: black;
+
+        &:hover {
+            background: #e5e5e5;
+        }
+    }
+
+    &-alert {
+        background: var(--color-btn-alert);
+
+        &:hover {
+            background: var(--color-btn-alert-hover);
+        }
+    }
+
+}
